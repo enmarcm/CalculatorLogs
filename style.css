@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+/* https://fonts.google.com/specimen/Rubik ESE ES EL LINK PARA DESCARGAR LA FUENTE */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4169E1;
+    height: 100vh;
+}
+
+
+.calculadora{
+    min-height: 550px;
+    background-color: #1806b7;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 80%;
+    border: 0.6rem solid #090150;
+    border-radius: 1rem;
+}
+
+.pantalla{
+    display: flex; 
+    margin: 0.8rem;
+    
+}
+
+.pantalla>textarea{
+    width: 100%;
+    height: 6rem;
+    border-radius: 1rem;
+    resize: none;
+    border: 0.3rem solid #090150;
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.pantalla>textarea:focus{
+    outline: 0;
+}
+
+.botones{
+    display: grid;
+    padding: 0.8rem;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:  repeat(5, 1fr);
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    
+    /* LOS BOTONES SE PUEDEN PONER REDONDOS SI BORDER-RADIUS ES 5REM Y APLICAMOS EL MARGIN */
+    /* border-radius: 5rem;
+    margin: 0.4rem;
+    box-shadow: 4px 3px #012d01; */
+}
+
+.boton:hover{
+    opacity: 0.65;
+}
+
+.boton:active{
+    box-shadow: 2px 3px #012d01;
+    transition: 0.2s ;
+}
+
+/*BOTON 0*/
+.boton:nth-child(10){
+    grid-column: 1/3;
+    border-radius: 0px 0px 0px 10px;
+}
+
+/* BOTON + */
+.boton:nth-child(11){
+    grid-row: 1/2;
+    grid-column: 4/5;
+
+    border-radius: 0px 10px 0px 0px;
+}
+
+.boton:nth-child(12){
+    grid-row: 2/3;
+    grid-column: 4/5;
+}
+
+.boton:nth-child(13){
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+.boton:nth-child(14){
+    grid-row: 4/5;
+    grid-column: 4/5;
+}
+
+/* BOTON = */
+.boton:nth-child(15){
+    grid-row: 5/6;
+    grid-column: 4/5;
+    border-radius: 0px 0px 10px 0px;
+}
+
+/* BOTON C*/
+.boton:last-child{
+    border-radius: 10px 0px 0px 0px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.operadores{
+    background-color: #eb7d0f;
+}
+
+
+
+@media(max-width:600px){
+
+    .container{
+        display: flex;
+        align-items: start;
+    }
+
+    .calculadora{
+        width: 100%;
+        margin: 0.5rem;
+    }
+
+    .botones{
+        padding: 0.1rem;
+    }
+
+}
